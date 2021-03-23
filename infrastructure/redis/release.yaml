@@ -18,6 +18,11 @@ spec:
       retries: 3
   values:
     usePassword: true
+    cluster:
+      enabled: false
+    master:
+      persistence:
+      enabled: false
   valuesFrom:
   - kind: Secret
     name: redis-auth
