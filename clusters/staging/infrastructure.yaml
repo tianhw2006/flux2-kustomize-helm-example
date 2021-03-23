@@ -4,10 +4,16 @@ metadata:
   name: infrastructure
   namespace: flux-system
 spec:
-  interval: 10m0s
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./infrastructure
-  prune: true
-  validation: client
+  # content omitted for brevity
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-gpg  
+# spec:
+#   interval: 10m0s
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+#   path: ./infrastructure
+#   prune: true
+#   validation: client

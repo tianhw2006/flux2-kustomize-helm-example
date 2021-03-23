@@ -4,9 +4,10 @@ namespace: redis
 resources:
   - namespace.yaml
   - release.yaml
-configMapGenerator:
-  - name: redis-values
-    files:
-      - values.yaml=values.yaml
-configurations:
-  - kustomizeconfig.yaml
+  - redis-auth.yaml
+# configMapGenerator:
+#   - name: redis-values
+#     files:
+#       - values.yaml=values.yaml
+# configurations:
+#   - kustomizeconfig.yaml
